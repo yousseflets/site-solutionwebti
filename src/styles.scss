@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globais do site. Aplica imagem de fundo (arquivo em /public/planodefundo.jpg)
+	 e usa a fonte 'Orbitron' carregada via Google Fonts.
+
+	 Nota: as tags de preconnect/stylesheet para Google Fonts foram adicionadas em `src/index.html`.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* Default font stack: Orbitron com fallbacks */
+:root {
+	--base-font-family: 'Orbitron', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background-image: url('/planodefundo.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #f8fafc; /* fallback */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #111827;
+	font-family: var(--base-font-family);
+}
+
+/* Garantir que o app ocupe altura mínima e que componentes com fundo transparente mostrem a imagem */
+app-root, main, .main {
+	min-height: 100vh;
+	background: transparent;
+}
+
+/* Opcional: layer escuro para legibilidade (descomente se quiser) */
+/*
+:root::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.25);
+	pointer-events: none;
+	z-index: 0;
+}
+*/
+
+/* Importante: components que usam background branco continuam com seu fundo, mantendo legibilidade */

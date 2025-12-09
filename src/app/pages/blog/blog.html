@@ -1,0 +1,107 @@
+<div class="blog">
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>Blog</h1>
+      <p class="lead">Insights, tutoriais e novidades sobre tecnologia</p>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="featured-post">
+    <div class="container">
+      <div class="featured-content">
+        <div class="featured-image">
+          <div class="image-placeholder">
+            <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+              <rect width="800" height="500" fill="#eff6ff"/>
+              <rect x="50" y="50" width="700" height="400" rx="10" fill="#2563eb" opacity="0.3"/>
+              <circle cx="400" cy="250" r="100" fill="#2563eb" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="featured-info">
+          <span class="featured-badge">Destaque</span>
+          <h2>{{ featuredPost.title }}</h2>
+          <p>{{ featuredPost.excerpt }}</p>
+          <div class="post-meta">
+            <span>📅 {{ featuredPost.date }}</span>
+            <span>👤 {{ featuredPost.author }}</span>
+            <span>⏱️ {{ featuredPost.readTime }}</span>
+          </div>
+          <a href="#" class="btn btn-primary">Ler Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="blog-posts">
+    <div class="container">
+      <div class="posts-header">
+        <h2>Últimos Artigos</h2>
+        <div class="filters">
+          <button 
+            [class.active]="selectedCategory() === 'all'"
+            (click)="filterByCategory('all')"
+            class="filter-btn">
+            Todos
+          </button>
+          @for (category of categories; track category) {
+            <button 
+              [class.active]="selectedCategory() === category"
+              (click)="filterByCategory(category)"
+              class="filter-btn">
+              {{ category }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="posts-grid">
+        @for (post of filteredPosts(); track post.id) {
+          <article class="post-card">
+            <div class="post-image">
+              <div class="image-placeholder">
+                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#eff6ff"/>
+                  <rect x="50" y="50" width="300" height="150" rx="5" fill="#2563eb" opacity="0.4"/>
+                </svg>
+              </div>
+              <span class="category-badge">{{ post.category }}</span>
+            </div>
+            <div class="post-content">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt }}</p>
+              <div class="post-meta">
+                <span>📅 {{ post.date }}</span>
+                <span>⏱️ {{ post.readTime }}</span>
+              </div>
+              <a href="#" class="read-more">Ler mais →</a>
+            </div>
+          </article>
+        }
+      </div>
+
+      @if (filteredPosts().length === 0) {
+        <div class="no-posts">
+          <p>Nenhum artigo encontrado nesta categoria.</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Receba nossas novidades</h2>
+        <p>Assine nossa newsletter e fique por dentro das últimas tendências em tecnologia</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail" required>
+          <button type="submit" class="btn btn-primary">Assinar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

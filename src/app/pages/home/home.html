@@ -1,0 +1,85 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Transforme seu Negócio com Soluções Digitais Inovadoras</h1>
+        <p class="hero-subtitle">
+          Somos especialistas em desenvolvimento web, mobile e consultoria em TI. 
+          Ajudamos empresas a alcançarem seus objetivos através da tecnologia.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/5511973087033?text=Ol%C3%A1%21%20Quero%20falar%20com%20voc%C3%AAs." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Fale Conosco</a>
+          <a routerLink="/servicos" class="btn btn-secondary">Nossos Serviços</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-illustration">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <rect x="50" y="100" width="400" height="300" rx="10" fill="#2563eb" opacity="0.1"/>
+            <rect x="70" y="120" width="150" height="100" rx="5" fill="#2563eb" opacity="0.3"/>
+            <rect x="240" y="120" width="190" height="100" rx="5" fill="#2563eb" opacity="0.3"/>
+            <rect x="70" y="240" width="360" height="60" rx="5" fill="#2563eb" opacity="0.3"/>
+            <circle cx="250" cy="50" r="30" fill="#2563eb"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">Soluções completas para impulsionar seu negócio</p>
+      
+      <div class="services-grid">
+        @for (service of services; track service.id) {
+          <div class="service-card">
+            <div class="service-icon">{{ service.icon }}</div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="section-title">Por que nos escolher?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Agilidade</h3>
+          <p>Entregas rápidas sem comprometer a qualidade</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>Foco em Resultados</h3>
+          <p>Soluções alinhadas aos seus objetivos de negócio</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>Segurança</h3>
+          <p>Proteção de dados e conformidade garantidas</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💡</div>
+          <h3>Inovação</h3>
+          <p>Tecnologias modernas e melhores práticas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Pronto para transformar seu negócio?</h2>
+      <p>Entre em contato conosco e descubra como podemos ajudar</p>
+      <a href="https://wa.me/5511973087033?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="btn btn-large">Solicite um Orçamento</a>
+    </div>
+  </section>
+</div>

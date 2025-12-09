@@ -1,0 +1,105 @@
+<div class="services">
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="container">
+      <h1>Nossos Serviços</h1>
+      <p class="lead">Soluções completas em tecnologia para impulsionar seu negócio</p>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="services-detail">
+    <div class="container">
+      @for (service of servicesList; track service.id) {
+        <div class="service-detail-card" [class.reverse]="service.id % 2 === 0">
+          <div class="service-content">
+            <div class="service-icon-large">{{ service.icon }}</div>
+            <h2>{{ service.title }}</h2>
+            <p class="service-description">{{ service.description }}</p>
+            
+            <h3>O que incluímos:</h3>
+            <ul class="features-list">
+              @for (feature of service.features; track feature) {
+                <li>{{ feature }}</li>
+              }
+            </ul>
+            
+            <div class="technologies">
+              <h4>Tecnologias:</h4>
+              <div class="tech-tags">
+                @for (tech of service.technologies; track tech) {
+                  <span class="tech-tag">{{ tech }}</span>
+                }
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-visual">
+            <div class="visual-placeholder">
+              <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="300" fill="#eff6ff" rx="10"/>
+                <circle [attr.cx]="200" [attr.cy]="150" r="60" fill="#2563eb" opacity="0.3"/>
+                <rect x="120" y="80" width="160" height="140" rx="10" fill="#2563eb" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process">
+    <div class="container">
+      <h2 class="section-title">Nosso Processo</h2>
+      <p class="section-subtitle">Como trabalhamos para entregar os melhores resultados</p>
+      
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <h3>Descoberta</h3>
+          <p>Entendemos profundamente suas necessidades e objetivos de negócio.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <h3>Planejamento</h3>
+          <p>Criamos uma estratégia detalhada e roadmap do projeto.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <h3>Desenvolvimento</h3>
+          <p>Implementamos a solução com as melhores práticas e tecnologias.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <h3>Testes</h3>
+          <p>Garantimos qualidade através de testes rigorosos.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">05</div>
+          <h3>Entrega</h3>
+          <p>Implantamos a solução e treinamos sua equipe.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">06</div>
+          <h3>Suporte</h3>
+          <p>Oferecemos suporte contínuo e melhorias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Pronto para começar seu projeto?</h2>
+      <p>Vamos conversar sobre como podemos ajudar seu negócio</p>
+      <a href="https://wa.me/5511973087033?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Solicitar Orçamento</a>
+    </div>
+  </section>
+</div>
