@@ -30,46 +30,46 @@ export class BlogComponent {
       date: '03 Dez 2024',
       readTime: '6 min'
     },
-    {
-      id: 2,
-      title: 'Migração para Cloud: Guia Prático',
-      excerpt: 'Passo a passo para migrar sua infraestrutura para a nuvem com segurança e eficiência.',
-      category: 'Cloud',
-      date: '01 Dez 2024',
-      readTime: '10 min'
-    },
-    {
-      id: 3,
-      title: 'Princípios de UX Design que todo desenvolvedor deve conhecer',
-      excerpt: 'Aprenda os fundamentos de UX para criar interfaces mais intuitivas e amigáveis.',
-      category: 'Design',
-      date: '28 Nov 2024',
-      readTime: '5 min'
-    },
-    {
-      id: 4,
-      title: 'CI/CD: Automatizando deploys com GitHub Actions',
-      excerpt: 'Tutorial prático sobre como configurar pipelines de CI/CD usando GitHub Actions.',
-      category: 'DevOps',
-      date: '25 Nov 2024',
-      readTime: '12 min'
-    },
-    {
-      id: 5,
-      title: 'Flutter vs React Native: Qual escolher?',
-      excerpt: 'Comparação detalhada entre os dois principais frameworks de desenvolvimento mobile.',
-      category: 'Mobile',
-      date: '22 Nov 2024',
-      readTime: '7 min'
-    },
-    {
-      id: 6,
-      title: 'TypeScript: Por que você deveria usar',
-      excerpt: 'Descubra os benefícios de adicionar tipagem estática ao seu código JavaScript.',
-      category: 'Desenvolvimento',
-      date: '20 Nov 2024',
-      readTime: '5 min'
-    }
+    // {
+    //   id: 2,
+    //   title: 'Migração para Cloud: Guia Prático',
+    //   excerpt: 'Passo a passo para migrar sua infraestrutura para a nuvem com segurança e eficiência.',
+    //   category: 'Cloud',
+    //   date: '01 Dez 2024',
+    //   readTime: '10 min'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'Princípios de UX Design que todo desenvolvedor deve conhecer',
+    //   excerpt: 'Aprenda os fundamentos de UX para criar interfaces mais intuitivas e amigáveis.',
+    //   category: 'Design',
+    //   date: '28 Nov 2024',
+    //   readTime: '5 min'
+    // },
+    // {
+    //   id: 4,
+    //   title: 'CI/CD: Automatizando deploys com GitHub Actions',
+    //   excerpt: 'Tutorial prático sobre como configurar pipelines de CI/CD usando GitHub Actions.',
+    //   category: 'DevOps',
+    //   date: '25 Nov 2024',
+    //   readTime: '12 min'
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Flutter vs React Native: Qual escolher?',
+    //   excerpt: 'Comparação detalhada entre os dois principais frameworks de desenvolvimento mobile.',
+    //   category: 'Mobile',
+    //   date: '22 Nov 2024',
+    //   readTime: '7 min'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'TypeScript: Por que você deveria usar',
+    //   excerpt: 'Descubra os benefícios de adicionar tipagem estática ao seu código JavaScript.',
+    //   category: 'Desenvolvimento',
+    //   date: '20 Nov 2024',
+    //   readTime: '5 min'
+    // }
   ];
 
   filteredPosts = computed(() => {

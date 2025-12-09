@@ -12,7 +12,7 @@
 .hero {
   padding: 4rem 0;
   /* Fundo semitransparente para permitir que a imagem de plano de fundo apareça */
-  background: linear-gradient(135deg, rgba(239,246,255,0.75) 0%, rgba(219,234,254,0.75) 100%);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.80) 0%, rgba(219,234,254,0.75) 100%);
 
   .container {
     display: grid;
@@ -45,7 +45,7 @@
   }
 
   .hero-illustration {
-    svg {
+    .home-hero {
       width: 100%;
       height: auto;
     }
