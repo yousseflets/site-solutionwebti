@@ -36,7 +36,7 @@ export class ServicesComponent {
         'Auditoria de sistemas',
         'Capacitação de equipes'
       ],
-      technologies: ['Metodologias Ágeis','Scrum', 'Kanban']
+      technologies: ['Metodologias Ágeis','Scrum']
     },
   ];
 }
