@@ -18,19 +18,19 @@
       <div class="footer-section">
         <h4>Links Rápidos</h4>
         <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/sobre">Sobre Nós</a></li>
-          <li><a routerLink="/servicos">Serviços</a></li>
-          <!-- <li><a routerLink="/blog">Blog</a></li> -->
+          <li><a href="#" (click)="navigateTo('/'); $event.preventDefault()">Home</a></li>
+          <li><a href="#" (click)="navigateTo('/sobre'); $event.preventDefault()">Sobre Nós</a></li>
+          <li><a href="#" (click)="navigateTo('/servicos'); $event.preventDefault()">Serviços</a></li>
+          <!-- <li><a href="#" (click)="navigateTo('/blog'); $event.preventDefault()">Blog</a></li> -->
         </ul>
       </div>
 
       <div class="footer-section">
         <h4>Serviços</h4>
         <ul>
-          <li><a href="#">Desenvolvimento Web</a></li>
+          <li><a href="#" (click)="navigateTo('/servicos','service-1'); $event.preventDefault()">Desenvolvimento Web</a></li>
           <!-- <li><a href="#">Desenvolvimento Mobile</a></li> -->
-          <li><a href="#">Consultoria TI</a></li>
+          <li><a href="#" (click)="navigateTo('/servicos','service-2'); $event.preventDefault()">Consultoria TI</a></li>
           <!-- <li><a href="#">Cloud Solutions</a></li> -->
         </ul>
       </div>
